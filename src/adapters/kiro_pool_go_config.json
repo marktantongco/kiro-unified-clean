@@ -1,0 +1,36 @@
+{
+  "listen": "0.0.0.0:5000",
+  "accounts": [
+    {
+      "id": "acc1",
+      "authMethod": "social",
+      "refreshToken": "YOUR_REFRESH",
+      "region": "us-east-1",
+      "proxy": "",
+      "usage": 0,
+      "exhausted": false
+    },
+    {
+      "id": "acc2",
+      "authMethod": "idc",
+      "refreshToken": "...",
+      "clientId": "...",
+      "clientSecret": "...",
+      "region": "us-east-1",
+      "proxy": "socks5://proxy:1080"
+    }
+  ],
+  "poolKeys": [
+    {
+      "key": "kpp_demo_xxx",
+      "creditLimit": 100,
+      "used": 0
+    }
+  ],
+  "strategy": "smart",
+  "adminPassword": "change_me",
+  "multiRegion": [
+    "us-east-1",
+    "eu-central-1"
+  ]
+}

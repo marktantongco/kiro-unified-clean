@@ -1,0 +1,42 @@
+{
+  "install": "npx skills@latest add LilMGenius/paperthin --global --agent '*'",
+  "skills": {
+    "depth": {
+      "re0": "Rewrite drifted artifact into clean v0 not patch - one artifact - model invoker",
+      "readchk": "Check model's read of request surface only real surviving fork - one instruction - model - readonly",
+      "aim": "Read handed-over data propose intent to confirm not ask - one data drop - model readonly",
+      "modelchk": "Size cheapest sufficient tier fast/standard/frontier + reasoning effort glance\u2192exhaustive neutral scale - one task - model readonly - advises never routes",
+      "hate": "Refuse nice: one objection could kill it + cheapest test - one plan - user",
+      "macrothink": "Strip bait fan out fresh reads report divergence first - one direction - user readonly",
+      "feynman": "Press just-made decision until explainable or gap flagged - one decision - user readonly",
+      "autobahn": "Carve unsafe scope out up front run safe rest full strength log descope - one task - model",
+      "detool": "Replace incidental stack nouns with mechanism they mean - one durable artifact - model",
+      "dedash": "Remove em-dashes look-alikes picking punctuation each spot - prose - user",
+      "debloat": "Compress bloated artifact to load-bearing density cut words never rule - one artifact - user",
+      "shower": "Cold-read with zero-context eyes does it stand alone - one artifact - model readonly",
+      "factchk": "Verify asserted against sources both ways absurd real obvious false - one claim - model",
+      "mandela": "Audit leakage does outside ground-truth actually enter - one eval - model readonly",
+      "sip": "After change taste with repo's own clean-and-true checks - output - model",
+      "re0-git": "Rewrite finished commit message so git log alone hands off - one commit - user",
+      "re0-release": "Run shipping releasing checklist tag publish once confirmed - one release - user",
+      "re0-merge": "Review land contribution gate keep author credit approve before closing explain change - one contribution - user"
+    },
+    "breadth": {
+      "ssotize": "Audit scatter consolidate to one home point rest",
+      "re0-upgrade": "Upgrade to full current catalog retire renamed add new confirmed first"
+    },
+    "coil": {
+      "re0-plan": "Open new iteration folder DESIGN/WORKFLOW/EVIDENCE before re0-loop first turn",
+      "re0-loop": "Run build\u2192QA\u2192re0-memo\u2192re0-work loop so learning compounds not code",
+      "re0-memo": "Pull lessons anti-patterns from finished/failed cycle",
+      "re0-work": "Start over from v0 keeping only lessons earned reuse",
+      "catchup": "Rebuild lost context from live state what needs what changed what new words mean",
+      "nba": "Read live cycle state return single next best action not menu"
+    },
+    "mesh": {
+      "prism": "Split one artifact across independent lenses return where they clash and question that resolves it"
+    }
+  },
+  "workflow": "Install \u2192 run from elevated/admin shell symlink auto-update \u2192 stay current /re0-upgrade \u2192 use /re0 etc model-invoked also fire",
+  "principle": "Every skill removes: re0 rewrites not patches, readchk asks only real fork, aim proposes not asks, modelchk neutral scale, macrothink divergence first, feynman gap flagged, prism clash never average, autobahn carve unsafe, detool strip nouns, dedash judged, debloat load-bearing, shower stranger, ssotize one home, reorder move only reword nothing, sip auto, re0-memo preserve lesson let wrong build die, catchup/nba reload map one next move. Restraint is product."
+}

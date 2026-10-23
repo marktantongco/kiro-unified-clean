@@ -1,0 +1,9 @@
+data/
+*.db
+*.sqlite
+__pycache__/
+venv/
+.env
+CLAUDE.local.md
+kiro-pool-go
+*.log

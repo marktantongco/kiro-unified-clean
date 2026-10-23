@@ -1,0 +1,13 @@
+[Unit]
+Description=KiroPool Go zero-MITM pool + kpp metering v8.2
+After=network.target
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/opt/kiro-pool
+ExecStart=/opt/kiro-pool/kiro-pool-proxy --config /opt/kiro-pool/data/config.json
+Restart=always
+RestartSec=5
+Environment=RUST_LOG=info
+[Install]
+WantedBy=multi-user.target

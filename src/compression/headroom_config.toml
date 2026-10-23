@@ -1,0 +1,25 @@
+# ADOPT headroomlabs-ai/headroom 77625★ 3324 commits
+# Compress tool outputs logs files RAG chunks before LLM
+# Library: from headroom import compress; result = compress(messages, model="gpt-4o")
+# Proxy: headroom proxy --port 8787 zero code any language
+# Wrap: headroom wrap claude|codex|grok|copilot|cursor|aider|opencode|cline|continue|goose|openhands|openclaw|vibe|omp|zcode; unwrap
+# MCP: headroom_compress, headroom_retrieve, headroom_stats
+# Cross-agent memory shared Claude Codex Gemini Grok dedup
+# headroom learn mines failed sessions → CLAUDE.local.md (gitignored) / CLAUDE.md / AGENTS.md / GEMINI.md / GROK.md
+# Output token reduction: verbosity steering append terse note end system prompt cache still hits, effort routing dials thinking down when turn only resuming after tool result
+# Telemetry: headroom doctor, headroom perf, headroom dashboard live savings, headroom savings, headroom output-savings Reduction 31.7% 95% CI 27.7…35.7% estimated, HEADROOM_OUTPUT_HOLDOUT=0.1 measured
+# Env: HEADROOM_OUTPUT_SHAPER=1 off by default, HEADROOM_VERBOSITY_LEVEL pinned after restart
+# Proof: Code search 17199→13597 21%, SRE 55957→24340 57%, codebase 58801→33895 42%, GitHub triage 46067→32429 30%, JSON repetitive 90%, prose low
+# Latency: 0.21ms p50 10K JSON 1.4ms 100K, accuracy GSM8K 0.870→0.870 TruthfulQA 0.53→0.56 SQuAD 97% at 19% BFCL 97% at 32%
+
+[proxy]
+port = 8787
+
+[output_shaper]
+enabled = true # HEADROOM_OUTPUT_SHAPER=1
+verbosity = "auto" # learned via headroom learn --verbosity
+effort_routing = true # dials thinking down when resuming after tool
+
+[compression]
+engines = ["CacheAligner","ContentRouter","CCR","SmartCrusher","CodeCompressor","Kompress-v2-base"]
+reversible = true

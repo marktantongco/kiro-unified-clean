@@ -1,0 +1,19 @@
+{
+  "name": "AIClient2API TLS sidecar",
+  "repo": "justlovemaki/AIClient2API 8901\u2605 1019 commits",
+  "features": [
+    "TLS sidecar Go uTLS simulate browser bypass Cloudflare 403 Grok",
+    "multi-protocol Antigravity Codex Grok Kiro OpenAI Claude",
+    "OpenAI/Claude/Gemini mutual conversion",
+    "provider pools polling failover health check 99.9%",
+    "account pool management provider_pools.json",
+    "Skill for AI agents /api/help /api/example 50+ endpoints",
+    "Web UI console",
+    "image generation /v1/images/generations /v1/images/edits",
+    "Docker 100k+ pulls Trendshift #2"
+  ],
+  "auth": {
+    "kiro": "api key file ~/.aws/sso/cache/kiro-auth-token.json or SQLite ~/.local/share/kiro-cli/data.sqlite3",
+    "extended_thinking": true
+  }
+}

@@ -1,0 +1,65 @@
+
+version: '3.9'
+services:
+  kiro-pool-go:
+    build:
+      context: ./src/runtime
+      dockerfile: Dockerfile.go
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./data:/app/data
+      - kiro-pool-data:/root/.config/kiro-pool
+    environment:
+      - STRATEGY=smart
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-change_me}
+      - MULTI_REGION=us-east-1,eu-central-1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:5000/health"]
+      interval: 10s
+
+  kiro-unified:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    ports:
+      - "8000:8000"
+    depends_on:
+      - kiro-pool-go
+    environment:
+      - KIRO_POOL_URL=http://kiro-pool-go:5000
+      - HEADROOM_URL=http://headroom:8787
+    volumes:
+      - ./src:/app/src
+    restart: unless-stopped
+
+  headroom:
+    image: headroomlabs/headroom:latest
+    ports:
+      - "8787:8787"
+    command: ["proxy", "--port", "8787"]
+    environment:
+      - HEADROOM_OUTPUT_SHAPER=1
+    volumes:
+      - headroom-cache:/root/.headroom
+    restart: unless-stopped
+
+  kiro-proxy-triple:
+    build:
+      context: ./src/adapters
+      dockerfile: Dockerfile.kiro-proxy
+    ports:
+      - "8080:8080"
+    volumes:
+      - kiro-proxy-data:/app/data
+    environment:
+      - PAYLOAD_LIMIT=615KB
+      - SESSION_STICKINESS=60s
+      - PER_ACCOUNT_PROXY=true
+    restart: unless-stopped
+
+volumes:
+  kiro-pool-data:
+  kiro-proxy-data:
+  headroom-cache:

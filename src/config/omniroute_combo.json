@@ -1,0 +1,20 @@
+{
+  "name": "omniroute + kiro stack",
+  "description": "ADAPT OmniRoute 80220\u2605 375 providers 150+ free RTK+Caveman compression 15-95%",
+  "providers": 375,
+  "free_tiers": 150,
+  "models": 1400,
+  "routing_strategies": 20,
+  "features": [
+    "quota-aware auto-fallback",
+    "RTK+Caveman compression 15-95%",
+    "20 routing combos flagship auto zero-config",
+    "resilience 3 independent layers",
+    "MCP/A2A Desktop/PWA",
+    "radar free catalog",
+    "quota telemetry live",
+    "headless serve --headless",
+    "LTS rail infra"
+  ],
+  "headline": "~1.62B tokens/month aggregate third-party free tiers pool-deduped 34 recurring pool keys 471 entries methodology docs/reference/FREE_TIERS.md"
+}
